@@ -1,4 +1,5 @@
-file 'default www' do
-   path '/var/www/html/index.html'
-   content 'hello fucker'
+
+hostname = node['hostname']
+file '/etc/motd' do 
+content " hostname :  #{hostname}"
 end
